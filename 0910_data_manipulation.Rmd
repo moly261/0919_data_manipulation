@@ -12,5 +12,54 @@ litters_data = janitor::clean_names(litters_data)
 
 pups_data = read.csv("/Users/yiliu/Desktop/Semester1/Data Science I/example_REPO/data_import_examples/FAS_pups.csv")
 pups_data = janitor::clean_names(pups_data)
+
+```
+
+## selecting!!!
+
+```{r}
+##select(litters_data, group, litter_number)
+
+##select(litters_data, -group)
+
+##litters_selected = select(litters_data, litter_number, everything())
+
+##select(litters_data, group:gd_of_birth)
+
+##select(litters_data, GROUP = group, litter_number)
+
+##rename(litters_data, GROUP = group, LiTtEr_NuMbEr = litter_number)
+
+```
+
+## Filtering
+```{r}
+filter(litters_data, group == "Mod8") ## "==" if the value euqals take that data
+
+filter(litters_data, gd_of_birth == 20)
+
+filter(litters_data, gd_of_birth >= 20)
+
+filter(litters_data, group == "Con7" & gd_of_birth == 20)
+
+##?? filter(litters_data, group == "Con7"|group == "Mod8"))
+
+filter(litters_data, group %in% c("Con7", "Con8"))
+
+filter(litters_data, gd0_weight > gd18_weight)
+
+filter(litters_data, gd0_weight + gd18_weight < 70)
+
+##don't do this
+##filter(litters_data, !is.na(gd0_weight))
+
+drop_na(litters_data, gd0_weight)
+
+```
+
+## Mutate
+
+```{r}
+
 ```
 
