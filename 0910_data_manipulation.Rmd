@@ -60,6 +60,16 @@ drop_na(litters_data, gd0_weight)
 ## Mutate
 
 ```{r}
+mutate(
+  litters_data,
+  wt_gain = gd18_weight - gd0_weight,
+  group = str_to_lower(group),
+  group = str_to_upper(group))
+```
+
+## Arrange
+
+```{r}
 
 ```
 
