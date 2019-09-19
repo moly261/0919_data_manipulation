@@ -1,0 +1,16 @@
+---
+title: "0919_data_manipulation"
+author: "YI LIU"
+date: "9/19/2019"
+output: html_document
+---
+
+```{r}
+library(tidyverse)
+litters_data =  read.csv("/Users/yiliu/Desktop/Semester1/Data Science I/example_REPO/data_import_examples/FAS_litters.csv")
+litters_data = janitor::clean_names(litters_data)
+
+pups_data = read.csv("/Users/yiliu/Desktop/Semester1/Data Science I/example_REPO/data_import_examples/FAS_pups.csv")
+pups_data = janitor::clean_names(pups_data)
+```
+
